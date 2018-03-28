@@ -1,0 +1,25 @@
+transcribe_file_kor() 와 transcribe_file_eng() 는 Google Cloud를 이용하여 입력된 음성파일을 텍스트 파일로 변환 시켜주는 역할을합니다.
+
+그 텍스트 파일을 읽고 로 번역하는 함수가 translateKorToEng() 이고
+
+그것을 다시 사운드 파일로 변환하기 위해서 'sox' 를 이용합니다.
+
+
+
+영어로 변환된 파일로 Alexa 에게 질문을 하는 함수가  askToAlexa() 입니다.
+
+
+
+이제 Alexa의 대답이 저장이 되었을것이므로 그것을 한글로 변역한뒤에 출력만 해주면 끝!
+
+
+
+다시 sox를 이용하여 알렉사의 대답(영어)를 wav파일로 바꾸고 transcribe_file_eng()를 이용하여 텍스트 파일로 만들어줍니다.
+
+
+
+이제 그 텍스트 파일을 translateEngToKor()를 이용하여 한글로 번역을 한뒤에
+
+koreanTextToSpeech()를 이용하여 음성으로 출력해줍니다.
+
+
