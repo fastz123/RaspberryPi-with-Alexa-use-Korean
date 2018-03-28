@@ -1,0 +1,6 @@
+필요한 툴들을 먼저 라즈베리파이에 설치해 줍시다.
+
+$ sudo apt-get update && sudo apt-get upgrade
+$ sudo apt-get install sox
+$ sudo apt-get install mpg321
+$ pip install --upgrade google-cloud-speech
