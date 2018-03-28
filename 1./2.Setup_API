@@ -1,0 +1,44 @@
+1번의 설명을 보면 test 폴더안에 있는 test_ask.py 파일은 영어로 된 .wav파일을 알렉사에게 요청하면 그에 알맞는 대답을 영어로된 .wav파일로 반환해준다.
+
+
+
+하지만 우리가 해야할것은 한글로 하려는 것이기 때문에 더 많은 과정이 필요하다.
+
+
+
+과정
+
+한글로된 파일 녹음 -> 한글로된 텍스트로 변환 -> 번역 -> 영어.wav파일을 알렉사에게 -> 영어로된 알렉사의 대답.wav -> 번역 -> 한글로된 텍스트로 변환 -> 음성으로 출력
+
+
+사용할 API
+STT : Google Cloud Speech(음성파일을 영어,한글 텍스트로 변환)
+번역 : Naver 기계번역 API
+TTS : Naver 음성합성 API
+을 이용할것입니다.
+
+
+
+1. Google Cloud Speech
+
+https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu﻿
+﻿에 들어가서 google cloud SDK환경을 setup을 해줍니다.
+
+그리고 API의 이용을 위해서 
+https://cloud.google.com/speech/docs/getting-started
+를 참고하여 잘 실행이 되는지 확인해봅시다.
+
+
+google cloud speech API명세 : https://cloud.google.com/speech/docs/sync-recognize#speech-sync-recognize-python
+
+
+
+번역
+
+2. 네이버 기계번역 API명세 : https://developers.naver.com/docs/labs/translator/
+
+
+TTS
+
+3. 네이버 음성합성 API명세 : https://developers.naver.com/docs/labs/tts/
+을 참고하여 API의 키를 발급받고 명세서를 확인하여 코드를 받습니다.
